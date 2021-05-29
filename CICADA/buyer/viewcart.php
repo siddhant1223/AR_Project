@@ -16,34 +16,37 @@ th {
     background-color: #2b3cc2;
     color: white;
 }
-td{
-    border: 2px solid black;
-}
 tr:nth-child(even) {background-color: #dae6f5}
 </style>
 </head>
 <body>
 <table>
 <tr>
-<th>Item ID</th>
 <th>Item Name</th>
-<th>Price/kg</th>
-<th>Available Quantity</th>
+<th>Quantity</th>
+<th>Price</th>
 </tr>
 <?php
 include "db_conn.php";
+session_start();
 $user = $_SESSION['username'];
 $sql = "SELECT * FROM $user";
+$totalres = $conn->query("SELECT SUM(quantity) AS totalquantity, SUM(quantity*price) AS totalbill FROM $user");
+$row = $totalres->fetch_assoc();
+$total_quantity = $row['totalquantity'];
+$total_price = $row['totalbill'];
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-// output data of each row
+
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["itemID"]. "</td><td>" . $row["itemname"] . "</td><td>" . $row["price"] . "</td><td>"
-        . $row["avail_quantity"]. "</td></tr>";
+        echo "<tr><td>" . $row["itemname"]. "</td><td>" . $row["quantity"] . "</td><td>" . $row["price"] . "</td><tr>";
     }
+    echo "<tr><td><br></td><td><br></td><td><br></td><tr>";
+    echo "<tr><td><b>Total : </b></td><td><b>" . $total_quantity . "</td><td><b>" . $total_price . "</td><tr>";
     echo "</table>";
-    } else { echo "0 results"; }
+    } 
 ?>
+<center><h2><a href="checkout.php">Checkout</a></h2>
 </table>
 </body>
 </html>

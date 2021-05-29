@@ -25,13 +25,13 @@ if (isset($_POST['uname']) && isset($_POST['pass'])) {
         header("Location: index.php?error=Password is required");
 	    exit();
 	}else{
-		$sql = "INSERT INTO users_buyers (username, password, fname, lname, email) VALUES ('$uname', '$pass', '$fname', '$lname', '$email')";
-
-		$result = mysqli_query($conn, $sql);
+		$sql1 = "INSERT INTO users_buyers (username, password, fname, lname, email) VALUES ('$uname', '$pass', '$fname', '$lname', '$email')";
+		$sql2 = "CREATE TABLE $uname (seller_uname VARCHAR(100), itemname VARCHAR(50), price INT, quantity INT)";
+		mysqli_query($conn, $sql1);
+		mysqli_query($conn, $sql2);
 		$message = "Buyer Registration Successful!";
 		echo "<script>alert('$message');
 		window.location.href='index.php';</script>";
-		
 	}
 }
 else{

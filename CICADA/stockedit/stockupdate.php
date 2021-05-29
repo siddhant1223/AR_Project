@@ -28,10 +28,10 @@ if (isset($_POST['itemID'])){
 		$sql1 = "INSERT INTO $user (itemID, itemname, price, avail_quantity, imglink) VALUES ('$itemid', '$itemname', '$price', '$quantity', '$link')";
 		$sql2 = "UPDATE $user SET price = '$price', avail_quantity = '$quantity' WHERE itemID='$itemid'";
         if($type==1){
-            mysqli_query($conn, $sql1);
+            $r = mysqli_query($conn, $sql1);
         }
         else{
-            mysqli_query($conn, $sql2);
+            $r = mysqli_query($conn, $sql2);
         }
 		$message = "Stock Edit Successful! $result->num_rows";
 		echo "<script>alert('$message');

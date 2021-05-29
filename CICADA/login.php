@@ -34,7 +34,7 @@ if (isset($_POST['uname']) && isset($_POST['pass'])) {
             if ($row['username'] === $uname && $row['password'] === $pass) {
             	$_SESSION['username'] = $row['username'];
 				if($usertype == 'users_buyers'){
-            		header("Location: buyer.php");
+            		header("Location: ./buyer/buyer.php");
 				}
 				else{
 					header("Location: ./stockedit/seller.php");
