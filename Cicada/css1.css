@@ -1,0 +1,132 @@
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: #2a2c2a;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 150px 420px;
+    width: 400px;
+    height: 350px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.buyer{
+    padding: 40px 50px ;
+    background-color: #fff;
+    color: #111;
+}
+
+.seller{
+    padding: 40px 50px ;
+    background-color: #111;
+    color: #fff;
+
+}
+
+h1{
+    text-align: center;
+    font-weight: 900;
+    font-style: inherit;
+}
+
+#sell{
+    border: 0;
+}
+
+#sell:hover{
+    background-color: #fff;
+    color: #111;
+    border-radius: 20px;
+}
+
+#buy{
+    border: 0;
+}
+
+#buy:hover{
+    background-color: #111;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.F_seller{
+    padding: 1em;
+}
+
+.F_buyer
+{
+    padding: 1em;
+}
+
+#buytext, #selltext{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    left: 5px;
+    color:blue;
+}
+
+a:hover{
+    padding: 3px 5px;
+    border: 2px solid blue;
+
+    background-color: yellow;
+}
+
+p{
+    text-align: center;
+    font-weight: 700;
+}
+
+#username{
+    position: inherit;
+    padding: 5px;
+    margin: 3px;
+    width: 200px;
+    height: 15;
+    top: 50px;
+    border-radius: 10px;
+    border-color: black;
+    font-size: medium;
+}
+
+#password{
+    position: inherit;
+    padding: 5px;
+    margin: 3px;
+    width: 200px;
+    height: 15;
+    top: 50px;
+    border-radius: 10px;
+    border-color: black;
+    font-size: medium;
+}
+
+button{
+    position: relative;
+    padding: 4px;
+    margin: 10px 5px;
+    width: 50px;
+    margin: 20px 80px;
+    height: 15;
+    font-size: medium;
+}
+
+button:hover{
+    color: rgb(231, 19, 19);
+}
+
+
+label{
+    font-size: medium;
+    font-style: italic;
+    padding: 2px;
+    margin: 2px;
+}
