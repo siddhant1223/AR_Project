@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(market.jpeg);
+    background-repeat: no-repeat;
+}
+
+.form-container{
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    height: 550px;
+    width: 450px;
+}
+
+.form{
+    position: absolute;
+    margin-top: 10px;
+    left: 107px;
+    height: 410px;
+    width: 240px;
+    border-radius: 10px;
+    border-radius: 4px solid black;
+    top: 30px;
+}
+
+.data{
+    position: relative;
+    margin: 5px 7px 14px 2px;
+    left: 10px;
+    padding: 2.5px;
+    font-size: medium;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+label{
+    border: none;
+    position: relative;
+    font-style: italic;
+    margin: 2px 5px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color:rgb(185, 33, 91);
+}
+
+button{
+    position: relative;
+    padding: 4px;
+    width: 100px;
+    height: 30px;
+    left: 60px;
+    top: 20px;
+    border-radius: 5px;
+    border: 2.5px solid cornflowerblue;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+button:hover{
+    color: rgb(255, 255, 255);
+    border: 2.5px solid rgb(255, 7, 7);
+    background-color: rgb(23, 11, 199);
+}

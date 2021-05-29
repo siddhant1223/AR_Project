@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(./shop4.jpg);
+    background-repeat:no-repeat;
+}
+
+.form-container{
+    position: absolute;
+    left: 800px;
+    height: 750px;
+    width: 670px;
+    background-image: url(./frombgphone.jpg);
+    background-repeat:no-repeat;
+}
+
+.form{
+    position: absolute;
+    margin-top: 10px;
+    left: 197px;
+    height: 410px;
+    width: 240px;
+    border-radius: 10px;
+    border-radius: 4px solid black;
+    top: 130px;
+    background-image: url(shop.jpeg);
+}
+
+.data{
+    position: relative;
+    margin: 5px 7px 14px 2px;
+    left: 10px;
+    padding: 3.5px;
+    font-size: medium;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+label{
+    border: none;
+    position: relative;
+    font-style: italic;
+    margin: 2px 5px;
+    left: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color:rgb(185, 33, 91);
+}
+
+button{
+    position: relative;
+    padding: 4px;
+    width: 100px;
+    height: 30px;
+    left: 60px;
+    top: 20px;
+    border-radius: 5px;
+    border: 2.5px solid cornflowerblue;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+button:hover{
+    color: rgb(23, 11, 199);
+    border: 2.5px solid brown;
+    background-color: rgba(249, 253, 7, 1);
+}
